@@ -5,6 +5,7 @@ import Home from "../pages/home";
 
 export default function Router(){
     const Stack = createStackNavigator()
+    
 
     return(
         <NavigationContainer>

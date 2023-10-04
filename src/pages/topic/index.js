@@ -8,20 +8,21 @@ import YoutubeIframe from "react-native-youtube-iframe";
 export default function Topic() {
   const route = useRoute();
   const { item } = route.params;
+  console.log("item",item)
   
-  const video_height = 200;
+  
   return (
     <SafeAreaView>
       <Container>
         <Header />
-        <View>
-          <Text>{item.nome}</Text>
-        </View>
+        <TitleBox>
+            <Title>{item.nome}</Title>
+        </TitleBox>
         <VideoContainer>
           <YoutubeIframe
-            videoId="e3W86TPMaNk"
-            height={video_height}
-            width={350}
+            videoId={item.linkYoutube}
+            height={"95%"}
+            width={"95%"}
           />
         </VideoContainer>
       </Container>
@@ -35,12 +36,25 @@ const Container = styled.View`
   width: 100%;
 `;
 const VideoContainer = styled.View`
-  padding-top: 5%;
   margin-top: 3%;
   display: flex;
   align-items: center;
-  //justify-content: center;
+  justify-content: center;
   width: 100%;
-  height: 45%;
+  height: 30%;
   background-color:blue;
+`;
+
+const TitleBox = styled.View`
+  margin-top: 3%;
+  height: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3%;
+`;
+
+const Title = styled.Text`
+  font-size: 22px;
+  color: black;
 `;

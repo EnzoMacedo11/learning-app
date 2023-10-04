@@ -2,273 +2,269 @@ const ThemeType = {
   Física: [
     {
       nome: "Mecânica",
-      linkYoutube: "https://www.youtube.com/watch?v=video1"
+      linkYoutube: "9vriJYiTmbg"
     },
     {
       nome: "Eletromagnetismo",
-      linkYoutube: "https://www.youtube.com/watch?v=video2"
+      linkYoutube: "dKEo3Ru1qls"
     },
     {
       nome: "Termodinâmica",
-      linkYoutube: "https://www.youtube.com/watch?v=video3"
+      linkYoutube: "GYxXCr6HXcw"
     },
     {
       nome: "Óptica",
-      linkYoutube: "https://www.youtube.com/watch?v=video4"
+      linkYoutube: "YW1M2c6__0k"
     },
     {
       nome: "Ondas",
-      linkYoutube: "https://www.youtube.com/watch?v=video5"
+      linkYoutube: "Izy1sNmyunc"
     },
     {
       nome: "Eletrostática",
-      linkYoutube: "https://www.youtube.com/watch?v=video6"
+      linkYoutube: "VpfbomHIhBA"
     },
     {
       nome: "Física Moderna",
-      linkYoutube: "https://www.youtube.com/watch?v=video7"
+      linkYoutube: "5gnfopxcKjk"
     },
     {
       nome: "Leis de Newton",
-      linkYoutube: "https://www.youtube.com/watch?v=video8"
+      linkYoutube: "Qqp_Gidms9w"
     }
   ],
   Matemática: [
     {
       nome: "Aritmética",
-      linkYoutube: "https://www.youtube.com/watch?v=video9"
+      linkYoutube: "jY5G67TWKr8"
     },
     {
       nome: "Álgebra",
-      linkYoutube: "https://www.youtube.com/watch?v=video10"
+      linkYoutube: "HwDx3Hhy-w0"
     },
     {
       nome: "Conjuntos Numéricos",
-      linkYoutube: "https://www.youtube.com/watch?v=video11"
+      linkYoutube: "A8rEk8cqsnM"
     },
     {
       nome: "Equações Algébricas",
-      linkYoutube: "https://www.youtube.com/watch?v=video12"
+      linkYoutube: "i7MZpiRht2E"
     },
     {
       nome: "Geometria",
-      linkYoutube: "https://www.youtube.com/watch?v=video13"
+      linkYoutube: "EzGf1UEnnsY"
     },
     {
       nome: "Trigonometria",
-      linkYoutube: "https://www.youtube.com/watch?v=video14"
+      linkYoutube: "6o1OhV_RZUU"
     },
     {
       nome: "Probabilidade e Estatística",
-      linkYoutube: "https://www.youtube.com/watch?v=video15"
+      linkYoutube: "fuaiSkhTirc"
     },
     {
       nome: "Cálculo",
-      linkYoutube: "https://www.youtube.com/watch?v=video16"
+      linkYoutube: "uaYFrtduFmI"
     }
   ],
   Biologia: [
     {
       nome: "Ecologia",
-      linkYoutube: "https://www.youtube.com/watch?v=video17"
+      linkYoutube: "KKELP-3_Dlk"
     },
     {
       nome: "Genética",
-      linkYoutube: "https://www.youtube.com/watch?v=video18"
+      linkYoutube: "Teyow7y8FxM"
     },
     {
       nome: "Evolução",
-      linkYoutube: "https://www.youtube.com/watch?v=video19"
+      linkYoutube: "Uodc0C4jFQs"
     },
     {
       nome: "Anatomia e Fisiologia",
-      linkYoutube: "https://www.youtube.com/watch?v=video20"
+      linkYoutube: "94381-P1eRA"
     },
     {
       nome: "Classificação dos Seres Vivos",
-      linkYoutube: "https://www.youtube.com/watch?v=video21"
+      linkYoutube: "YUI-7x4IsbY"
     },
     {
       nome: "Biologia Molecular",
-      linkYoutube: "https://www.youtube.com/watch?v=video22"
+      linkYoutube: "MgPkr8uuV5w"
     },
     {
       nome: "Saúde e Doenças",
-      linkYoutube: "https://www.youtube.com/watch?v=video23"
+      linkYoutube: "nc2Z5e85x7o"
     },
     {
       nome: "Biodiversidade",
-      linkYoutube: "https://www.youtube.com/watch?v=video24"
+      linkYoutube: "DFsF4wML-VM"
     }
   ],
   Geografia: [
     {
       nome: "Climatologia",
-      linkYoutube: "https://www.youtube.com/watch?v=video25"
+      linkYoutube: "D3YQ6zl3-2M"
     },
     {
       nome: "Geopolítica",
-      linkYoutube: "https://www.youtube.com/watch?v=video26"
+      linkYoutube: "Uhgh6cAOhCg"
     },
     {
       nome: "Globalização",
-      linkYoutube: "https://www.youtube.com/watch?v=video27"
+      linkYoutube: "1JnFqa8bJps"
     },
     {
       nome: "Urbanização",
-      linkYoutube: "https://www.youtube.com/watch?v=video28"
+      linkYoutube: "7svcoojhegM"
     },
     {
       nome: "Recursos Naturais",
-      linkYoutube: "https://www.youtube.com/watch?v=video29"
+      linkYoutube: "_LLukJ5WmAE"
     },
     {
       nome: "Migrações",
-      linkYoutube: "https://www.youtube.com/watch?v=video30"
+      linkYoutube: "kb4Xxnmc7oY"
     },
     {
       nome: "Cidades e Desenvolvimento",
-      linkYoutube: "https://www.youtube.com/watch?v=video31"
+      linkYoutube: "jPZyKuMrAj4"
     },
     {
       nome: "Biomas Brasileiros",
-      linkYoutube: "https://www.youtube.com/watch?v=video32"
+      linkYoutube: "WYkUVasw-DY"
     }
   ],
   Historia: [
     {
       nome: "Idade Média",
-      linkYoutube: "https://www.youtube.com/watch?v=video33"
+      linkYoutube: "CTIs_RSPr84"
     },
     {
       nome: "Revolução Industrial",
-      linkYoutube: "https://www.youtube.com/watch?v=video34"
+      linkYoutube: "t6nJNv-pNr8"
     },
     {
       nome: "Escravidão no Brasil",
-      linkYoutube: "https://www.youtube.com/watch?v=video35"
+      linkYoutube: "WMHU1buKaaw"
     },
     {
       nome: "Ditadura Militar no Brasil",
-      linkYoutube: "https://www.youtube.com/watch?v=video36"
+      linkYoutube: "B8hLHJSA6V0"
     },
     {
       nome: "Brasil Colônia",
-      linkYoutube: "https://www.youtube.com/watch?v=video37"
+      linkYoutube: "sP2kl0irjBQ"
     },
     {
       nome: "Revolução Francesa",
-      linkYoutube: "https://www.youtube.com/watch?v=video38"
+      linkYoutube: "bb6d54mQkL0"
     },
     {
       nome: "Segunda Guerra Mundial",
-      linkYoutube: "https://www.youtube.com/watch?v=video39"
+      linkYoutube: "RedndCHHtYc"
     },
     {
       nome: "Movimentos Sociais no Brasil",
-      linkYoutube: "https://www.youtube.com/watch?v=video40"
+      linkYoutube: "nu505BvywsU"
     }
   ],
   Filosofia: [
     {
       nome: "Filosofia Antiga",
-      linkYoutube: "https://www.youtube.com/watch?v=video41"
+      linkYoutube: "4VzqshtvrcE"
     },
     {
       nome: "Filosofia Moderna",
-      linkYoutube: "https://www.youtube.com/watch?v=video42"
+      linkYoutube: "dq9NU31PqwU"
     },
     {
       nome: "Ética e Moral",
-      linkYoutube: "https://www.youtube.com/watch?v=video43"
+      linkYoutube: "T0ZdMP3DVos"
     },
     {
       nome: "Política e Estado",
-      linkYoutube: "https://www.youtube.com/watch?v=video44"
+      linkYoutube: "09pbApChqms"
     },
     {
       nome: "Racionalismo vs. Empirismo",
-      linkYoutube: "https://www.youtube.com/watch?v=video45"
+      linkYoutube: "hPyWpa6P49M"
     },
     {
       nome: "Existencialismo",
-      linkYoutube: "https://www.youtube.com/watch?v=video46"
+      linkYoutube: "g26I8ufn2xc"
     },
     {
       nome: "Filosofia da Ciência",
-      linkYoutube: "https://www.youtube.com/watch?v=video47"
+      linkYoutube: "3YUinDn9qnU"
     },
     {
       nome: "Filosofia da Linguagem",
-      linkYoutube: "https://www.youtube.com/watch?v=video48"
+      linkYoutube: "KRD6YV_rz08"
     }
   ],
   Português: [
     {
       nome: "Interpretação de Textos",
-      linkYoutube: "https://www.youtube.com/watch?v=video49"
+      linkYoutube: "XsN0e_xPyNI"
     },
     {
       nome: "Gramática",
-      linkYoutube: "https://www.youtube.com/watch?v=video50"
+      linkYoutube: "6B94ECGEQeY"
     },
     {
       nome: "Figuras de Linguagem",
-      linkYoutube: "https://www.youtube.com/watch?v=video51"
+      linkYoutube: "UY-9_Wt6C-U"
     },
     {
       nome: "Gêneros Textuais",
-      linkYoutube: "https://www.youtube.com/watch?v=video52"
+      linkYoutube: "51Vj6uzsdaA"
     },
     {
       nome: "Literatura Brasileira",
-      linkYoutube: "https://www.youtube.com/watch?v=video53"
-    },
-    {
-      nome: "Redação Oficial",
-      linkYoutube: "https://www.youtube.com/watch?v=video54"
+      linkYoutube: "IK7NVABOfMk"
     },
     {
       nome: "Variedades Linguísticas",
-      linkYoutube: "https://www.youtube.com/watch?v=video55"
+      linkYoutube: "Aqh32VzKvqo"
     },
     {
       nome: "Análise Sintática",
-      linkYoutube: "https://www.youtube.com/watch?v=video56"
+      linkYoutube: "ZR_Ou01WsK0"
     }
   ],
   Redação: [
     {
       nome: "Desafios da Educação no Brasil",
-      linkYoutube: "https://www.youtube.com/watch?v=video57"
+      linkYoutube: "9dLRIbVqMms"
     },
     {
       nome: "Meio Ambiente e Sustentabilidade",
-      linkYoutube: "https://www.youtube.com/watch?v=video58"
+      linkYoutube: "rR04TKaJmnM"
     },
     {
       nome: "Desigualdade Social",
-      linkYoutube: "https://www.youtube.com/watch?v=video59"
+      linkYoutube: "kT2XxGo9R2w"
     },
     {
       nome: "Violência contra a Mulher",
-      linkYoutube: "https://www.youtube.com/watch?v=video60"
+      linkYoutube: "uhuDuQEDHQw"
     },
     {
       nome: "Direitos Humanos",
-      linkYoutube: "https://www.youtube.com/watch?v=video61"
+      linkYoutube: "pavQQEuqRik"
     },
     {
       nome: "Tecnologia e Sociedade",
-      linkYoutube: "https://www.youtube.com/watch?v=video62"
+      linkYoutube: "A6GZgZdw06Q"
     },
     {
       nome: "Fake News e Desinformação",
-      linkYoutube: "https://www.youtube.com/watch?v=video63"
+      linkYoutube: "9oK0cxQFTBQ"
     },
     {
       nome: "Saúde Pública",
-      linkYoutube: "https://www.youtube.com/watch?v=video64"
+      linkYoutube: "JbWuxV2FxLQ"
     }
   ]
 };

@@ -5,11 +5,12 @@ import styled from 'styled-components/native';
 import Header from '../../components/header';
 
 export default function Home() {
+
   return (
     <SafeAreaView>
       <Container>
         <Header/>
-        <Text>Meu conteúdo</Text>
+        <Text>Home Page</Text>
       </Container>
     </SafeAreaView>
   );
@@ -17,6 +18,6 @@ export default function Home() {
 
 const Container = styled.View`
 height:100%;
-background-color:green;
+background-color:#F4E9E1;
 display:flex;
 `

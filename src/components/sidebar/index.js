@@ -1,37 +1,22 @@
 import styled from "styled-components/native";
+import { useNavigation } from "@react-navigation/native";
+import ThemeType from "../../themeType";
 
 export default function SideBar(props) {
-  const { visible } = props;
-  console.log("teste", visible);
+  const { visible, goTheme} = props;
+  const Themes = Object.keys(ThemeType)
+
+
   return (
     <Container visible={visible}>
       <Main>
       <Title>Matérias</Title>
-        <TitleBox>
-          <Title>Matematica</Title>
-        </TitleBox>
-        <TitleBox>
-          <Title>Física</Title>
-        </TitleBox>
-        <TitleBox>
-          <Title>Biologia</Title>
-        </TitleBox>
-        <TitleBox>
-          <Title>Geografia</Title>
-        </TitleBox>
-        <TitleBox>
-          <Title>História</Title>
-        </TitleBox>
-        <TitleBox>
-          <Title>Filosofia</Title>
-        </TitleBox>
-        <TitleBox>
-          <Title>Português</Title>
-        </TitleBox>
-        <TitleBox>
-          <Title>Redação</Title>
-        </TitleBox>
-
+      {Themes.map((t,i)=>(
+        <TitleBox key={i} onPress={()=>goTheme(t)}>
+        <SubTitle>{t}</SubTitle>
+      </TitleBox>
+      )
+      )}
       </Main>
     </Container>
   );
@@ -46,7 +31,7 @@ const Container = styled.View`
   display: ${(props) => props.visible};
   align-items: center;
   justify-content: center;
-  background-color: #535C65;
+  background-color: #272753;
   z-index: 10;
   border-bottom-right-radius: 10%;
   border-top-right-radius: 10%;
@@ -66,13 +51,17 @@ margin-top:8%;
   width: 75%;
   height: 8%;
   display: flex;
-  background-color:#6E7A87;
+  background-color:#2E2E61;
   justify-content: center;
   align-items: center;
   border-radius:18%;
 `;
 
 const Title = styled.Text`
-  font-size: 16%;
+  font-size: 20px;
+  color: white;
+`;
+const SubTitle = styled.Text`
+  font-size: 15px;
   color: white;
 `;

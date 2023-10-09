@@ -33,13 +33,13 @@ export default function Header() {
       <SideBar visible={visible} goTheme={goTheme}/>
       <Container>
         <TouchableOpacity onPress={openMenu}>
-          <Entypo name="menu" size={20} color="black" />
+          <Entypo name="menu" size={20} color="white" />
         </TouchableOpacity>
         <TouchableOpacity onPress={goToHome}>
           <Logo>Learning App</Logo>
         </TouchableOpacity>
 
-        <Ionicons name="person" size={20} color="black" />
+        <Ionicons name="person" size={20} color="white" />
       </Container>
     </>
   );

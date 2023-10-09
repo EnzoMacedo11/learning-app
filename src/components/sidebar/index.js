@@ -1,5 +1,4 @@
 import styled from "styled-components/native";
-import { useNavigation } from "@react-navigation/native";
 import ThemeType from "../../themeType";
 
 export default function SideBar(props) {

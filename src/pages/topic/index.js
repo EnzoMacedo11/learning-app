@@ -1,5 +1,5 @@
 import styled from "styled-components/native";
-import {Alert, TouchableOpacity } from "react-native";
+import { Alert, Keyboard, KeyboardAvoidingView, Platform } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { FontAwesome } from "@expo/vector-icons";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -12,76 +12,84 @@ export default function Topic() {
   const route = useRoute();
   const { item } = route.params;
   const [message, setMessage] = useState("");
-  console.log("item", item);
 
   const [Comments, setComments] = useState([
-    { author: "Teste", message: "Aaaaaa" },
-    { author: "Teste 2", message: "bbbb" },
+    { author: "Aluno 1", message: "Duvida A" },
+    {
+      author: "Aluno 2",
+      message:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ligula eu lectus lobortis condimentum. Aliquam nonummy auctor massa.",
+    },
   ]);
 
-  const data = {author:"User",message}
-  
-  function newComments(){
-    if(data.message == ""){
-      Alert.alert("Alerta","Preencha o comentário antes de enviar")
-    }
-    else{
+  const data = { author: "User", message };
+
+  function newComments() {
+    if (data.message == "") {
+      Alert.alert("Alerta", "Preencha o comentário antes de enviar");
+    } else {
       setComments((prevComments) => [...prevComments, data]);
-      setMessage("")
+      setMessage("");
+      Keyboard.dismiss();
     }
-      
-    
-    
   }
 
   return (
-    <SafeAreaView>
-      <Container>
-        <Header />
-        <TitleBox>
-          <Title>{item.nome}</Title>
-        </TitleBox>
-        <VideoContainer>
-          <YoutubeIframe
-            videoId={item.linkYoutube}
-            height={"95%"}
-            width={"95%"}
-          />
-        </VideoContainer>
-        <Forum>
-          <ForumTitleBox>
-            <ForumTitle>Chat</ForumTitle>
-          </ForumTitleBox>
+    <KeyboardAvoidingView
+      behavior={Platform.OS === "ios" ? "padding" : "height"}
+    >
+      <SafeAreaView>
+        <Container>
+          <Header />
+          <TitleBox>
+            <Title>{item.nome}</Title>
+          </TitleBox>
+          <VideoContainer>
+            <YoutubeIframe
+              videoId={item.linkYoutube}
+              height={"95%"}
+              width={"95%"}
+            />
+          </VideoContainer>
+          <Forum>
+            <ForumTitleBox>
+              <ForumTitle>Chat</ForumTitle>
+            </ForumTitleBox>
+            <ScrollComments
+              keyboardShouldPersistTaps="handled"
+              showsVerticalScrollIndicator={false}
+            >
+              {Comments.map((c, i) => (
+                <CommentBox key={i}>
+                  <CommentIconBox>
+                    <Ionicons
+                      name="person-circle-outline"
+                      size={30}
+                      color="white"
+                    />
+                  </CommentIconBox>
 
-          <ScrollComments>
-            {Comments.map((c, i)=>(
-               <CommentBox key={i}>
-               <CommentIconBox>
-                 <Ionicons name="person-circle-outline" size={30} color="white" />
-               </CommentIconBox>
-   
-               <Comment>
-                 <CommentAuthor>{c.author}</CommentAuthor>
-                 <CommentMessage>{c.message} </CommentMessage>
-               </Comment>
-             </CommentBox>
-            ))}
-
-          </ScrollComments>
-
-          
-          <Chat>
-          
-            <ChatInput  placeholder=" Digite sua mensagem..." onChangeText={setMessage} value={message}/>
-            <CommentButton onPress={newComments}>
-            <FontAwesome name="send-o" size={22} color="whitesmoke" />
-            </CommentButton>
-       
-        
-          </Chat>
-        </Forum>
-      </Container>
-    </SafeAreaView>
+                  <Comment>
+                    <CommentAuthor>{c.author}</CommentAuthor>
+                    <CommentMessage>{c.message} </CommentMessage>
+                  </Comment>
+                </CommentBox>
+              ))}
+            </ScrollComments>
+            <Chat>
+              <ChatInput
+                placeholder="Digite sua mensagem..."
+                onChangeText={setMessage}
+                value={message}
+              />
+              <CommentButton onPress={newComments}>
+                <FontAwesome name="send-o" size={22} color="whitesmoke" />
+              </CommentButton>
+            </Chat>
+          </Forum>
+        </Container>
+      </SafeAreaView>
+    </KeyboardAvoidingView>
   );
 }
 
@@ -111,7 +119,7 @@ const ForumTitleBox = styled.View`
   border-top-right-radius: 12%;
   border-top-left-radius: 12%;
   height: 6%;
-  width:100%;
+  width: 100%;
   background-color: #272753;
   display: flex;
   align-items: center;
@@ -133,7 +141,7 @@ const Forum = styled.View`
   border-top-right-radius: 12%;
   border-top-left-radius: 12%;
   display: flex;
-  align-items:center;
+  align-items: center;
   width: 100%;
   height: 55%;
   background-color: #b6c8cd;
@@ -143,12 +151,12 @@ const Chat = styled.View`
   padding-left: 3%;
   background-color: #272753;
   display: flex;
-  flex-direction: row;
-  align-items: center;
   position: absolute;
   bottom: 0;
   left: 0;
-  height: 11%;
+  flex-direction: row;
+  align-items: center;
+  height: 15%;
   width: 100%;
 `;
 
@@ -158,6 +166,7 @@ const ChatInput = styled.TextInput`
   height: 70%;
   background-color: white;
   margin-right: 6%;
+  padding-left: 3%;
 `;
 
 const CommentBox = styled.View`
@@ -167,50 +176,50 @@ const CommentBox = styled.View`
   //align-items: center;
   width: 98%;
   height: 120px;
-  margin-top:1%;
+  margin-top: 1%;
   background-color: #272753;
-  border-radius:10%;
+  border-radius: 10%;
 `;
 
 const CommentIconBox = styled.View`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 10%;
+  width: 12%;
   height: 100%;
   //background-color: blue;
+  margin-left: 3%;
 `;
 
 const Comment = styled.View`
   display: flex;
   flex-direction: column;
-  width:85%;
-  height:100%;
-  margin-top:3%;
-  margin-left:2%;
+  width: 85%;
+  height: 100%;
+  margin-top: 2%;
+  margin-left: 2%;
   //background-color:green;
 `;
 const CommentAuthor = styled.Text`
   color: whitesmoke;
-  font-size: 16px;
-  margin-top:3%;
+  font-size: 17px;
+  margin-top: 3%;
 `;
 const CommentMessage = styled.Text`
   color: whitesmoke;
   font-size: 14px;
-  margin-top:1%;
-  margin-left:0%;
+  margin-top: 2%;
 `;
 
 const ScrollComments = styled.ScrollView`
-display:flex;
-width:95%;
-margin-bottom:11%;
-`
+  display: flex;
+  width: 95%;
+  margin-bottom: 15%;
+`;
 const CommentButton = styled.TouchableOpacity`
-display:flex;
-align-items:center;
-justify-content:center;
-width:12%;
-height:97%;
-`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 12%;
+  height: 97%;
+`;
